@@ -103,7 +103,7 @@ TABLE = tables.dat
 # First, we check if $(OBJDIR) is a directory, and create it if it isn't.
 # Then comes the actual compiling.
 $(OBJDIR)/%.o: %.f $(OBJDIR)/dir
-	$(FC) $(FFLAGS) -c $< -o $@
+	$(FC) $(FFLAGS) -std=legacy -c $< -o $@
 
 $(OBJDIR)/%.o: %.f90 $(OBJDIR)/dir
 	$(FC) $(FFLAGS) -c $< -o $@
